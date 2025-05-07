@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hava Durumu Uygulaması</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="weather-app">
+            <h1>Hava Durumu</h1>
+            <form id="weather-form">
+                <div class="input-group">
+                    <select id="city-select" required>
+                        <option value="">İl seçiniz</option>
+                    </select>
+                    <select id="district-select" required>
+                        <option value="">İlçe seçiniz</option>
+                    </select>
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                        Hava Durumu
+                    </button>
+                </div>
+            </form>
+            
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Yükleniyor...</p>
+            </div>
+
+            <div id="error" class="error hidden">
+                <i class="fas fa-exclamation-circle"></i>
+                <p>Şehir bulunamadı. Lütfen geçerli bir şehir adı giriniz.</p>
+            </div>
+
+            <div id="weather-info" class="weather-info hidden">
+                <div class="weather-header">
+                    <h2 id="city-name"></h2>
+                    <p id="date"></p>
+                </div>
+                <div class="weather-main">
+                    <div class="temperature">
+                        <span id="temperature"></span>
+                        <span class="unit">°C</span>
+                    </div>
+                    <div class="weather-icon">
+                        <img id="weather-icon" src="" alt="Hava durumu ikonu">
+                    </div>
+                </div>
+                <div class="weather-details">
+                    <div class="detail">
+                        <i class="fas fa-temperature-high"></i>
+                        <span id="feels-like"></span>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-wind"></i>
+                        <span id="wind"></span>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-tint"></i>
+                        <span id="humidity"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+</body>
+</html>
