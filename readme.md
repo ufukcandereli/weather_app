@@ -18,4 +18,3 @@ Modern front-end teknikleri kullanılarak geliştirilmiş bir hava durumu uygula
 Uygulamanın arayüzü aşağıdaki gibidir:
 
 ![Uygulama Görseli](image.png)
-
